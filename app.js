@@ -64,10 +64,8 @@ app.post("/players/", async (request,response) => {
     INSERT INTO
       cricket_team (player_name, jersey_number, role)
       VALUES 
-      (    
-          `${playerName}`,
-          ${jerseyNumber},
-              `${role}`);`;
+      ( '${playerName}', ${jerseyNumber}, '${role}');`;
+          
 
 
      const player = await db.run(addPlayerQuerry);
